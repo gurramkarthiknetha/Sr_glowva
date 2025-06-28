@@ -145,11 +145,12 @@ export default function TrendingProducts() {
       "buttonText": "+ Add"
     }
   ];
+  
 	return(
 		<div className="max-w-7xl mx-auto px-4 py-8">
 			<h1 className="text-3xl font-bold mb-2 text-center">Trending Products</h1>
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-				{products.map((product) => (
+				{products.slice(0, 8).map((product) => (
 					<div
 						key={product.id}
 						className="bg-white rounded-xl shadow-md overflow-hidden relative flex flex-col hover:shadow-lg transition-shadow duration-200 border border-gray-100"
