@@ -1,15 +1,15 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-white text-[#2d3a4a] py-10 px-4 mt-16 rounded-t-3xl shadow-2xl border-t-4 border border-[#000000]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <footer className="w-full bg-white text-[#2d3a4a] py-8 md:py-10 px-2 sm:px-4 mt-10 md:mt-16 rounded-t-2xl md:rounded-t-3xl shadow-2xl border-t-4 border border-[#000000]">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 px-2 sm:px-0">
         {/* Logo & Brand */}
-        <div className="flex flex-col items-center md:items-start">
-          <span className="text-2xl font-extrabold font-serif bg-clip-text text-transparent bg-gradient-to-r from-[#355c7d] via-[#f7cac9] to-[#b5ead7] drop-shadow-lg">Sr Glowva</span>
-          <span className="text-sm mt-1 font-mono text-[#2d3a4a]/80">Handcrafted Art Supplies & Accessories</span>
+        <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
+          <span className="text-xl sm:text-2xl font-extrabold font-serif bg-clip-text text-transparent bg-gradient-to-r from-[#355c7d] via-[#f7cac9] to-[#b5ead7] drop-shadow-lg">Sr Glowva</span>
+          <span className="text-xs sm:text-sm mt-1 font-mono text-[#2d3a4a]/80 text-center md:text-left">Handcrafted Art Supplies & Accessories</span>
         </div>
         {/* Contact & Social */}
         <div className="flex flex-col items-center gap-2">
-          <div className="flex gap-4 mb-2">
+          <div className="flex gap-3 sm:gap-4 mb-1 sm:mb-2">
             <a href="mailto:info@srglowva.com" className="hover:text-[#355c7d] transition-colors" aria-label="Email">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 12l-4-4-4 4m8 0l-4 4-4-4" /></svg>
             </a>
@@ -20,16 +20,16 @@ export default function Footer() {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><circle cx="17.5" cy="6.5" r="1.5" /></svg>
             </a>
           </div>
-          <div className="text-sm text-[#2d3a4a]/80 font-mono">Contact: +91 99999 99999</div>
+          <div className="text-xs sm:text-sm text-[#2d3a4a]/80 font-mono">Contact: +91 99999 99999</div>
         </div>
         {/* Quick Links */}
-        <div className="flex flex-col items-center md:items-end gap-1">
-          <a href="/about" className="hover:text-[#f7786b] transition-colors font-mono">About</a>
-          <a href="/categoriesPage" className="hover:text-[#f7786b] transition-colors font-mono">Categories</a>
-          <a href="/contact" className="hover:text-[#f7786b] transition-colors font-mono">Contact</a>
+        <div className="flex flex-col items-center md:items-end gap-0.5 sm:gap-1 mt-2 md:mt-0">
+          <a href="/about" className="hover:text-[#f7786b] transition-colors font-mono text-xs sm:text-base">About</a>
+          <a href="/categoriesPage" className="hover:text-[#f7786b] transition-colors font-mono text-xs sm:text-base">Categories</a>
+          <a href="/contact" className="hover:text-[#f7786b] transition-colors font-mono text-xs sm:text-base">Contact</a>
         </div>
       </div>
-      <div className="mt-8 text-center text-xs text-[#2d3a4a]/60 font-mono">
+      <div className="mt-6 md:mt-8 text-center text-[10px] sm:text-xs text-[#2d3a4a]/60 font-mono">
         &copy; {new Date().getFullYear()} Sr Glowva. All rights reserved.
       </div>
     </footer>

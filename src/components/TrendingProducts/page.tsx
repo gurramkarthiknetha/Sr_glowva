@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function TrendingProducts() {
 	const products=[
@@ -150,8 +151,8 @@ export default function TrendingProducts() {
   
 	return(
 		<div className="max-w-7xl mx-auto px-4 py-8 bg-white rounded-3xl border-4 border-[#e0f7fa] relative overflow-hidden">
-			<h1 className="text-4xl font-extrabold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#7c3aed] via-[#000000] to-[#f20081] tracking-widest mix-blend-multiply animate-pulse">Trending Products</h1>
-			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+			<h1 className="text-4xl sm:text-sm font-extrabold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-[#7c3aed] via-[#000000] to-[#f20081] tracking-widest mix-blend-multiply animate-pulse">Trending Products</h1>
+			<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 				{products.slice(0, 8).map((product) => (
 					<div
 						key={product.id}
@@ -176,10 +177,10 @@ export default function TrendingProducts() {
 						</div>
 						<div className="flex-1 flex flex-col justify-between p-4">
 							<div>
-								<h2 className="text-lg font-bold mb-1 text-[#7c3aed] font-serif">{product.title}</h2>
+								<h2 className="text-base sm:text-lg font-bold mb-1 text-[#7c3aed] font-serif">{product.title}</h2>
 								<div className="flex items-center gap-2 mb-2">
-									<span className="text-[#7c3aed] font-extrabold text-xl">₹{Math.round(product.price)}</span>
-									<span className="text-gray-400 line-through text-base">₹{Math.round(product.originalPrice)}</span>
+									<span className="text-lg sm:text-xl text-[#7c3aed] font-extrabold">₹{Math.round(product.price)}</span>
+									<span className="text-sm sm:text-base text-gray-400 line-through">₹{Math.round(product.originalPrice)}</span>
 								</div>
 							</div>
 							<div className="flex items-center gap-2 mt-4">
@@ -195,7 +196,14 @@ export default function TrendingProducts() {
 						</div>
 					</div>
 				))}
-			</div>
+      <div className="flex justify-center mt-8">
+        <Link href="/products" className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-[#7c3aed] via-[#5eead4] to-[#f472b6] text-white shadow hover:scale-110 transition-transform">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" className="w-10 h-10">
+            <path stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" d="M8 16h16m0 0l-6-6m6 6l-6 6" />
+          </svg>
+        </Link>
+      </div>
+      </div>
 		</div>
 	)
 }
