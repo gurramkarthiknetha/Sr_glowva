@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://srglowva.vercel.app
+
+# Sitemaps
+Sitemap: https://srglowva.vercel.app/sitemap.xml

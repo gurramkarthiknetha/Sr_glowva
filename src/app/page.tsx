@@ -2,6 +2,7 @@
 import Banner from "@/components/Banner/page";
 import Categories from "./categories/page";
 import TrendingProducts from "@/components/TrendingProducts/page";
+
 export default function Home() {
   return (
     <div className="min-h-screen w-full bg-white flex flex-col items-stretch">
