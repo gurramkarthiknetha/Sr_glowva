@@ -18,16 +18,15 @@ const categories = [
 
 export default function Categories() {
 	return (
-		<section className="w-full py-16 bg-gradient-to-l from-[#b5ead7] via-[#f7cac9] to-[#355c7d] rounded-3xl shadow-2xl border-4 border-double border-[#355c7d] mx-auto mt-8">
+		<section className="w-full py-16 bg-white rounded-3xl border-4 border-[#e0f7fa] mx-auto mt-8">
 			<div className="max-w-7xl mx-auto px-4">
-				<h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#355c7d] via-[#f7786b] to-[#b5ead7] text-center mb-10 drop-shadow-xl tracking-widest font-serif animate-pulse">
+				<h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#7c3aed] via-[#5eead4] to-[#f472b6] text-center mb-10 tracking-widest font-serif animate-pulse">
 					Shop by Category
 				</h2>
 
 				{/* horizontal scroll row */}
-  				<div className="flex gap-4 overflow-x-auto no-scrollbar max-w-full pb-2" style={{scrollbarWidth:'thin', maxWidth:'100vw'}}>
+  				<div className="flex gap-4 overflow-x-auto no-scrollbar pb-2">
 					{categories.map((cat, idx) => {
-						// Use fallback if image is missing or empty
 						const defaultImage =
 							idx % 2 === 0 ? "/images/earring.jpg" : "/images/tools.jpg";
 						const imageSrc =
@@ -37,12 +36,12 @@ export default function Categories() {
 						return (
 							<div
 								key={idx}
-								className="min-w-[140px] bg-white/80 rounded-2xl shadow-xl border-2 border-dotted border-[#f7786b] flex-shrink-0 p-4 text-center hover:shadow-2xl hover:scale-105 transition-all duration-200 backdrop-blur-md"
+								className="min-w-[140px] bg-white/90 rounded-2xl border-2 border-[#e0f7fa] flex-shrink-0 p-4 text-center hover:shadow-md hover:scale-105 transition-all duration-200 backdrop-blur-md"
 							>
 								<img
 									src={imageSrc}
 									alt={cat.title}
-									className="w-full h-28 object-cover rounded-md mb-3 border-b-4 border-double border-[#b5ead7]"
+									className="w-full h-28 object-cover rounded-md mb-3 "
 									onError={(e) => {
 										const target = e.target as HTMLImageElement;
 										// Only try fallback once, then use transparent pixel
@@ -51,11 +50,11 @@ export default function Categories() {
 											target.dataset.fallback = "true";
 										} else {
 											target.src =
-												"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+											"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 										}
 									}}
 								/>
-								<div className="font-bold text-base text-[#355c7d] font-mono">
+								<div className="font-bold text-base text-[#7c3aed] font-mono">
 									{cat.title}
 								</div>
 							</div>
@@ -65,15 +64,24 @@ export default function Categories() {
 					{/* view‑more card */}
 					<Link
 						href="/categoriesPage"
-						className="min-w-[140px] bg-[#ffdac1]/80 rounded-2xl shadow-inner border-2 border-dashed border-[#355c7d] flex-shrink-0 p-4 flex flex-col items-center justify-center hover:bg-[#b5ead7]/60 transition-colors font-mono font-bold text-[#355c7d]"
+						className="min-w-[140px] bg-[#f3e8ff]/80 rounded-2xl shadow-inner border-2 border-[#e0f7fa] flex-shrink-0 p-4 flex flex-col items-center justify-center hover:bg-[#e0f7fa]/60 transition-colors font-mono font-bold text-[#7c3aed]"
 					>
-						<span className="text-xl font-bold text-[#f7786b]">+4</span>
-						<span className="mt-1 text-sm font-medium text-[#355c7d]">
+						<span className="text-xl font-bold text-[#7c3aed]">+4</span>
+						<span className="mt-1 text-sm font-medium text-[#7c3aed]">
 							View&nbsp;more
 						</span>
 					</Link>
 				</div>
 			</div>
+			<style jsx global>{`
+        .no-scrollbar {
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
+        .no-scrollbar::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+      `}</style>
 		</section>
 	);
 }
