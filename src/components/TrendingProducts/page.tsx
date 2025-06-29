@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function TrendingProducts() {
 	const products=[
     {
@@ -156,9 +158,11 @@ export default function TrendingProducts() {
 						className="bg-white/90 rounded-2xl border-2 border-[#e0f7fa] relative flex flex-col hover:shadow-md transition-shadow duration-200 hover:scale-105 hover:border-[#7c3aed] hover:bg-[#e0f7fa]/80 backdrop-blur-md"
 					>
 						<div className="relative">
-							<img
+							<Image
 								src={product.thumbnail}
 								alt={product.title}
+								width={400}
+								height={224}
 								className="w-full h-56 object-cover rounded-t-2xl"
 							/>
 							<span className="absolute top-3 right-3 bg-gradient-to-r from-[#7c3aed] to-[#5eead4] text-white text-xs font-bold px-3 py-1 rounded-full z-10 border-2 border-white animate-bounce">

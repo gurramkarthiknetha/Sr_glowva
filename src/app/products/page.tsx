@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import PRODUCTS from "./productsData";
 
 export default function ProductsPage() {
@@ -117,9 +118,11 @@ export default function ProductsPage() {
 						>
 							<figure className="relative p-4 pb-0">
 								<Link href={`/products/${product.slug}`}>
-									<img
+									<Image
 										src={product.image}
 										alt={product.name}
+										width={400}
+										height={400}
 										className="w-full h-48 object-contain mx-auto"
 									/>
 								</Link>

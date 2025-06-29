@@ -2,6 +2,7 @@
 
 // src/components/Categories/index.tsx
 import Link from "next/link";
+import Image from "next/image";
 
 const categories = [
 	{ image: "/images/earring.jpg", title: "Earrings" },
@@ -38,21 +39,12 @@ export default function Categories() {
 								key={idx}
 								className="min-w-[140px] bg-white/90 rounded-2xl border-2 border-[#e0f7fa] flex-shrink-0 p-4 text-center hover:shadow-md hover:scale-105 transition-all duration-200 backdrop-blur-md"
 							>
-								<img
+								<Image
 									src={imageSrc}
 									alt={cat.title}
+									width={160}
+									height={112}
 									className="w-full h-28 object-cover rounded-md mb-3 "
-									onError={(e) => {
-										const target = e.target as HTMLImageElement;
-										// Only try fallback once, then use transparent pixel
-										if (!target.dataset.fallback) {
-											target.src = defaultImage;
-											target.dataset.fallback = "true";
-										} else {
-											target.src =
-											"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
-										}
-									}}
 								/>
 								<div className="font-bold text-base text-[#7c3aed] font-mono">
 									{cat.title}

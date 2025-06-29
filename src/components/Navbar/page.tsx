@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaUser, FaHeart, FaShoppingCart } from "react-icons/fa";
 
 
@@ -9,7 +10,7 @@ export default function NavBar() {
         {/* Logo */}
         <div className="flex items-center justify-between mr-16">
           <Link href="/">
-            <img src="/logos/srlogo.jpeg" alt="SR Glowva Logo" className="h-14 w-14 object-cover rounded-full select-none bg-white border border-gray-200 shadow" />
+            <Image src="/logos/srlogo.jpeg" alt="SR Glowva Logo" className="h-14 w-14 object-cover rounded-full select-none bg-white border border-gray-200 shadow" />
           </Link>
         </div>
         {/* Navigation */}

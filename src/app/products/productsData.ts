@@ -1,4 +1,15 @@
-const PRODUCTS = [
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  original: number;
+  discount: number;
+  image: string;
+  category: string;
+  slug: string;
+}
+
+const PRODUCTS: Product[] = [
   {
     id: 1,
     name: "Plain Resin Rectangle Tray Mold",

@@ -3,6 +3,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const categories = [
 	{
@@ -71,20 +72,12 @@ export default function AllCategories() {
 							href={`/category/${slug}`}
 							className="block border rounded-lg overflow-hidden hover:shadow-lg transition text-center bg-white"
 						>
-							<img
+							<Image
 								src={imageSrc}
 								alt={cat.title}
+								width={300}
+								height={160}
 								className="w-full h-40 object-cover"
-								onError={(e) => {
-									const target = e.target as HTMLImageElement;
-									if (!target.dataset.fallback) {
-										target.src = defaultImage;
-										target.dataset.fallback = "true";
-									} else {
-										target.src =
-											"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
-									}
-								}}
 							/>
 							<div className="px-3 py-2 text-sm font-semibold">
 								{cat.title}
