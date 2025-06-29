@@ -14,7 +14,6 @@ export default function NavBar() {
         </div>
         {/* Navigation */}
         <ul className="flex gap-8 items-center text-lg font-medium">
-          <li className="text-black"><Link href="/">Home</Link></li>
           <li className="text-black"><Link href="/products">Products</Link></li>
           <li className="text-black"><Link href="/allCategories">Categories</Link></li>
           
