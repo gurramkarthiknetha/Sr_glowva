@@ -144,7 +144,7 @@ export default function ProductsPage() {
 			<main className="flex-1 p-3 sm:p-4 md:p-6 overflow-y-auto">
 				{/* Hide heading on mobile, shown in filter bar */}
 				<h2 className="hidden md:block text-2xl font-bold mb-6">
-					Trending Products
+					Products
 				</h2>
 
 				<div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">

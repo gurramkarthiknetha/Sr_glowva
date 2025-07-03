@@ -19,7 +19,7 @@ export default function Footer() {
             <a href="https://instagram.com/" target="_blank" rel="noopener" className="hover:text-[#355c7d] transition-colors" aria-label="Instagram">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><circle cx="17.5" cy="6.5" r="1.5" /></svg>
             </a>
-          </div>
+          </div> 
           <div className="text-xs sm:text-sm text-[#2d3a4a]/80 font-mono">Contact: +91 99999 99999</div>
         </div>
         {/* Quick Links */}
